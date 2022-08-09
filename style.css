@@ -1,0 +1,432 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+:root {
+    --orange-normal: #f26818;
+    --orange-hover: #ff9b62;
+    --dark-blue: #162542;
+    --blue-grey: #7b8bad;
+    --off-white: #e8eff2;
+    --white: #ffffff;
+
+    --barlow: 'Barlow', sans-serif;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--barlow);
+    overflow-x: hidden;
+    max-width: 1440px;
+    margin-inline: auto;
+}
+
+p {
+    color: var(--blue-grey);
+    line-height: 1.625rem;
+    font-weight: 500;
+}
+
+h1, h2, h3 {
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--dark-blue);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 3.4375rem 5.1875rem;
+    margin-inline: 10.3125rem;
+}
+
+nav img{
+    height: 2.5rem;
+}
+
+.grid { 
+    display:grid;
+    column-gap: 30px;
+}
+
+.pre-order {
+    text-transform: uppercase;
+    padding-inline: 1.625rem 1.6875rem;
+    padding-block: 1rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+}
+
+.off-white {
+    background-color: var(--off-white);
+    color: var(--dark-blue);
+}
+
+.orange {
+    background-color: var(--orange-normal);
+    color: var(--white);
+}
+
+[class="pre-order off-white"]:hover{
+    background-color: var(--dark-blue);
+    color: var(--white);
+    cursor: pointer;
+}
+
+[class="pre-order orange"]:hover {
+    background-color: var(--orange-hover);
+    cursor: pointer;
+}
+
+.radius {
+    border-radius: 1.25rem;
+}
+
+.typemaster {
+    position:relative;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-block-end: 1.875rem;
+    margin-inline: 10.3125rem;
+}
+
+.typemaster article:first-of-type{
+    margin-block: 4.125rem;
+    padding-inline-end: 5.9375rem;
+}
+
+.typemaster h1 {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+    margin-block-end: 1.5rem;
+}
+
+.typemaster p {
+    font-size: 1.125rem;
+    margin-block-end: 2.5rem;
+}
+
+.typemaster .pre-order{
+    margin-inline-end: 2.5rem;
+}
+
+.typemaster span:last-of-type{
+    font-weight: 700;
+    color: var(--blue-grey);
+    text-transform: uppercase;
+}
+
+.typemaster picture{
+    max-width: 33.75rem;
+    max-height: 30rem;
+}
+
+.square {
+    position:absolute;
+}
+
+.typemaster .square {
+    right: -17.75rem;
+}
+
+.mechanical {
+    grid-template-columns: repeat(4, 1fr);
+    position: relative;
+    margin-block-end: 10.5rem;
+    margin-inline: 10.3125rem;
+}
+
+.mechanical .square {
+    left: -17.75rem;
+    bottom: 0.5625rem;
+}
+
+.mechanical picture:first-of-type {
+    max-width: 15.9375rem;
+}
+
+.last {
+    grid-column: span 2;
+    max-width: 27.8125rem;
+    max-height: 30rem;
+}
+
+.mechanical h2 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+    margin-block-end: 1.6875rem;
+    margin-inline-start: -0.25rem;
+}
+
+.mechanical article {
+    margin-block: 7rem;
+}
+
+.features {
+    grid-template-columns: repeat(4, 1fr);
+    margin-inline: 10.3125rem;
+    margin-block-end: 8rem;
+}
+
+.features img {
+    background-color: var(--orange-normal);
+    margin-block-end: 3rem;
+    border-radius: 1rem;
+}
+
+.compatible img {
+    padding: 1.375rem 1.2188rem;
+}
+
+.bluetooth img {
+    padding: 1.1563rem 1.4375rem;
+}
+
+.battery img {
+    padding: 1.375rem 1.0313rem;
+}
+
+.light img {
+    padding: 1.0313rem;
+}
+
+.features h3 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    margin-block-end: 1.5rem;
+    margin-inline-end: 3rem;
+}
+
+.features p {
+    padding-inline-end: 0.1875rem;
+}
+
+footer {
+    text-align: center;
+    margin-block-end: 2.4375rem;
+}
+
+footer span {
+    font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+    nav {
+        margin: 2.5rem;
+    }
+
+    .square {
+        display: none;
+    }
+
+    .typemaster {
+        margin-inline: 2.5rem;
+        grid-template-columns: 400px 1fr;
+        /* overflow:hidden; */
+    }
+
+    .typemaster article:first-of-type {
+        padding:2rem;
+        padding-inline: 0;
+    }
+
+    .typemaster h1 {
+        font-size: 3rem;
+        line-height: calc(0.83 * 56px);
+        margin-block-end: 2.125rem;
+    }
+
+    .typemaster p{
+        font-size: 1rem;
+        margin-block-end: 2.5rem;
+        padding-inline-end: 2rem;
+    }
+
+    .typemaster .pre-order{
+        margin-inline-end: 2.3125rem;
+    }
+
+    .typemaster picture{
+        position: absolute;
+        max-width: 478px;
+        max-height: 425px;
+        right: -12.35rem;
+        top: 20px;
+    }
+
+
+    .mechanical {
+        grid-template-columns: 214px 1fr;
+        margin-inline: 2.5rem;
+        margin-block-end: 8.875rem;
+    }
+    
+    .mechanical picture:first-of-type {
+        max-width: 13.375rem;
+        max-height: 20rem;
+    }
+    
+    .last {
+        max-width: 27.8125rem;
+        max-height:20rem;
+        grid-column: 2 / 3;
+    }
+    
+    .mechanical article {
+        margin-block: 4.5rem 0;
+        display: flex;
+        grid-column: span 2;
+        gap: 5rem;
+        margin-inline-start: 4px;
+        align-items: baseline;
+    }
+    
+    .mechanical h2 {
+        margin-block: 0;
+    }
+
+    .features {
+        grid-template-columns: 1fr 1fr;
+        margin-inline: 2.5rem 6.125rem;
+        gap: 3rem;
+        margin-block-end: 8.875rem;
+    }
+
+    .features img {
+        margin-block-end: 2.5rem;
+    }
+
+    .compatible h3, .light h3 {
+        padding-inline-end: 2rem;
+    }
+
+    .battery p {
+        padding-inline-start: .35rem;
+    }
+
+    footer {
+        margin-block-end: 2.6875rem;
+    }
+}
+
+@media (max-width: 479px) {
+    nav {
+        margin-inline: 1.5rem;
+        margin-block: 1.4375rem 4rem;
+    }
+
+    .pre-order {
+        padding-inline: 0.875rem;
+        padding-block: 0.6875rem;
+    }
+
+    .typemaster {
+        grid-template-columns: 1fr;
+        margin-inline: 1.5rem;
+    }
+
+    .typemaster article:first-of-type {
+        margin-block: 0;
+    }
+
+    .typemaster h1 {
+        margin-block-end: 2rem;
+    }
+    
+    .typemaster p {
+        padding:0;
+        margin-block-end: 3rem;
+    }
+
+    .typemaster .pre-order{
+        margin-inline-end: 2rem;
+    }
+    
+    .typemaster picture {
+        transform: scale(1.14);
+        position: relative;
+        right: -1.5rem;
+        top: 4rem;
+        margin-block-end: 5rem;
+    }
+
+    .mechanical {
+        grid-template-columns: 1fr;
+        row-gap: 4.6875rem;
+        column-gap: 24px;;
+        position:relative;
+        margin-inline: 1.5rem;
+    }
+    
+    .mechanical picture:first-of-type {
+        position:absolute;
+        max-width: 129px;
+        max-height: 193px;
+        left: -2.9rem;
+    }
+
+    .last {
+        max-width: 220px;
+        max-height: 193px;
+    }
+
+    .mechanical article {
+        display: initial;
+        text-align: center;
+        margin-block: 0
+    }
+
+    .mechanical h2 {
+        padding-inline: 1rem;
+        margin-block-end: 1.5rem
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        margin-inline: 1.5rem;
+        gap: 4rem;
+        margin-block-end: 6rem;
+    }
+
+    .features article { 
+        text-align: center;
+    }
+
+    .features img{
+        margin-inline: auto;
+        margin-block-end: 3rem;
+    }
+
+    .features h3{
+        margin-inline:0;
+        margin-block-end: 1.5rem;
+        padding:0;
+    }
+
+    footer {
+        margin-block-end: 3.125rem;
+    }
+}
